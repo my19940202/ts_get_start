@@ -31,9 +31,9 @@ let arr: any[] = ['123', true, 123, [3,2,1]];
 console.log("数组的使用",fibonacci, fib, arr);
 
 // 类型断言（Type Assertion）可以用来手动指定一个值的类型。
-let toBoolean = (something: string | number): boolean => {
-    return <boolean>something;
-}
+// let toBoolean = (something: string | number): boolean => {
+//     return <boolean>something;
+// }
 
 let anyValue:any="mmm";
 // (<string>anyValue) = 123;

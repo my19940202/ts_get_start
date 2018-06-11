@@ -1,7 +1,10 @@
 module.exports = {
-    entry: __dirname + "/src/index",
+    entry: {
+        index: __dirname + "/src/index",
+        edm: __dirname + "/src/edm"
+    },
     output: {
-        filename: "bundle.js",
+        filename: '[name].js',
         path: __dirname + "/dist"
     },
 
@@ -30,7 +33,11 @@ module.exports = {
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
 
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+            { 
+                test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+                loader: 'url-loader?limit=50000&name=[path][name].[ext]'
+            }
         ]
     },
 
