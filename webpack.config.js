@@ -1,7 +1,6 @@
 module.exports = {
     entry: {
-        index: __dirname + "/src/index",
-        edm: __dirname + "/src/edm"
+        index: __dirname + "/src/index"
     },
     output: {
         filename: '[name].js',
@@ -37,7 +36,11 @@ module.exports = {
             { 
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=50000&name=[path][name].[ext]'
-            }
+            },
+            {
+                test: /\.css/,
+                loader: 'style-loader!css-loader'
+            },
         ]
     },
 

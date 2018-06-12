@@ -14,22 +14,22 @@
   "description": "",
   "devDependencies": {
     "awesome-typescript-loader": "^3.5.0",
-    "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
-    "csv-loader": "^2.1.1",
     "file-loader": "^0.11.2",
-    "html-webpack-plugin": "^2.29.0",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.7",
     "typescript": "^2.9.1",
     "webpack-dev-server": "^2.8.1",
+    "react-router-dom": "^4.2.2",
     "webpack": "^3.0.0"
   },
   "dependencies": {
     "@types/react": "^16.3.17",
     "@types/react-dom": "^16.0.6",
     "@types/lodash": "^4.14.101",
+    "@baidu/native-ads-antd": "^3.1.42",
+    "@baidu/rcre-core": "^0.18.14",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   }
