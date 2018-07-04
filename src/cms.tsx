@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { RcreDemo } from "./component/RcreDemo";
+import { TestBar } from "./component/Cms";
 
 // main router
 ReactDOM.render(
     <div>
-        <RcreDemo/>
+        <TestBar name=""fuck />
     </div>,
     document.getElementById("app")  as HTMLElement
 );

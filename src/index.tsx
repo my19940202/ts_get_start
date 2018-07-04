@@ -16,12 +16,25 @@ const content = (
     </div>
 );
 
-const Default = ({match}) => {
+interface PropsInterface {
+    match: any;
+}
+
+const Default = (props: PropsInterface) => {
     document.title = 'default';
     return (
-        <h1>router相关学习, 该路由传递了参数：{match.params.indexId || "null"}</h1>
+        <h1>router相关学习, 该路由传递了参数：{props.match.params.indexId || "null"}</h1>
     );
 };
+
+
+// const Default = ({match}) => {
+//     document.title = 'default';
+//     return (
+//         <h1>router相关学习, 该路由传递了参数：{match.params.indexId || "null"}</h1>
+//     );
+// };
+
 
 const Header = () => {
     return (

@@ -214,7 +214,7 @@ export const RcreDemo = () => {
                 "style": {
                     "padding": 10,
                     "background": "red"
-                }
+                },
                 "children": [{
                     "type": "div",
                     "style": {
@@ -289,6 +289,8 @@ export const RcreDemo = () => {
             <h1>元素嵌套 和布局</h1>
             <Render code={JSON.stringify(divOO)} />
             <Render code={JSON.stringify(configRow)} />
+
+            
         </div>
     );
 };

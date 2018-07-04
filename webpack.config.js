@@ -2,6 +2,7 @@ module.exports = {
     entry: {
         index: __dirname + "/src/index",
         rcre: __dirname + "/src/rcre",
+        cms: __dirname + "/src/cms"
     },
     output: {
         filename: '[name].js',
@@ -13,7 +14,6 @@ module.exports = {
         host: '0.0.0.0',
         port: 8181,
         inline: true,
-        progress: true,
         stats: {
             colors: true
         }
