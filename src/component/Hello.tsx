@@ -1,5 +1,4 @@
 import * as React from "react";
-import {withRouter} from 'react-router-dom';
 export interface HelloProps { compiler: string; framework: string; }
 
 // 函数式的组件写法
@@ -28,6 +27,3 @@ export class TestBar extends React.Component<HelloProps, {}> {
         );
     }
 }
-
-// export withRouter<HelloProps>(TestBar);
-// export default <HelloProps>(TestBar);

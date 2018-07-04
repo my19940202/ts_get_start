@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Render} from '@baidu/rcre-core';
+
 // 熟悉RCRE的各种使用套路 
 export const RcreDemo = () => {
     document.title = 'rcre入门使用';

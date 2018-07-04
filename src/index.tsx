@@ -1,13 +1,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Hello, TestBar } from "./component/Hello";
-// import { RcreDemo } from "./component/RcreDemo";
 import '@baidu/native-ads-antd/dist/@baidu/native-ads-antd.css';
 import {Popover, Button, Row, Col } from '@baidu/native-ads-antd';
-import { HashRouter, Route, hashHistory, Switch,Link} from 'react-router-dom';
+import { BrowserRouter, Route, hashHistory, Link} from 'react-router-dom';
 
-// import { cc, ck } from "./util";
 const content = (
     <div>
         <h1>人生啊</h1>
@@ -27,7 +24,7 @@ const Default = (props: PropsInterface) => {
     );
 };
 
-
+// 和上面写法是一样的
 // const Default = ({match}) => {
 //     document.title = 'default';
 //     return (
@@ -73,21 +70,17 @@ const MyAntd = () => {
     );
 };
 
-// main router
-// <Route path="/rcre" component={RcreDemo} />
 ReactDOM.render(
-    <HashRouter history={hashHistory}>
+    <BrowserRouter history={hashHistory}>
         <div>
             <Header/>
-            <Switch>
                 <Route exact path="/" component={Default} />
                 <Route path="/get/:indexId" component={Default} />
                 <Route path="/antd" component={MyAntd} />
                 <Route path="/test" component={() => (
                     <div><h1>没有单独抽离的组件</h1></div>
                 )} />
-            </Switch>
         </div>
-    </HashRouter>,
+    </BrowserRouter>,
     document.getElementById("app")  as HTMLElement
 );
