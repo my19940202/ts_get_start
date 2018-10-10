@@ -63,7 +63,9 @@ export class AntdGetStrted extends React.Component<HelloProps, {}> {
                     </Sider>
                     
                     <Layout>
-                        <Header style={{ background: '#fff', padding: 0 }} />
+                        <Header style={{ background: '#fff', padding: 0 }}>
+                            this is header
+                        </Header>
                         <Content style={{ margin: '10px' }}>
                             <div style={{ padding: 10, background: '#fff', minHeight: 360 }}>
                                 <h1>通过路由控制不同的内容展现 </h1>

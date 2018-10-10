@@ -1,10 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-
-import '@baidu/native-ads-antd/dist/@baidu/native-ads-antd.css';
-import {Popover, Button, Row, Col } from '@baidu/native-ads-antd';
-import { BrowserRouter, Route, hashHistory, Link} from 'react-router-dom';
-
+// import '@baidu/native-ads-antd/dist/@baidu/native-ads-antd.css';
+// import {Popover, Button, Row, Col } from '@baidu/native-ads-antd';
+import {BrowserRouter, Route, hashHistory, Link} from 'react-router-dom';
 const content = (
     <div>
         <h1>人生啊</h1>
@@ -65,28 +63,28 @@ const Header = () => {
     );
 };
 
-const MyAntd = () => {
-    document.title = 'antd的组件使用';
-    return (
-        <div>
-            <h1>antd的组件使用 adafs</h1>
-            <Popover content={content} title="suck">
-                <Button type="primary">Hover me</Button>
-            </Popover>
-            <br/>
-            <Row>
-                <Col style={{background: 'red'}} span={12}>col-12</Col>
-                <Col style={{background: 'blue'}} span={12}>col-12</Col>
-            </Row>
-            <br/>
-            <Row>
-                <Col style={{background: 'yellow'}} span={8}>col-8</Col>
-                <Col style={{background: 'red'}} span={8}>col-8</Col>
-                <Col style={{background: 'blue'}} span={8}>col-8</Col>
-            </Row>
-        </div>
-    );
-};
+// const MyAntd = () => {
+//     document.title = 'antd的组件使用';
+//     return (
+//         <div>
+//             <h1>antd的组件使用 adafs</h1>
+//             <Popover content={content} title="suck">
+//                 <Button type="primary">Hover me</Button>
+//             </Popover>
+//             <br/>
+//             <Row>
+//                 <Col style={{background: 'red'}} span={12}>col-12</Col>
+//                 <Col style={{background: 'blue'}} span={12}>col-12</Col>
+//             </Row>
+//             <br/>
+//             <Row>
+//                 <Col style={{background: 'yellow'}} span={8}>col-8</Col>
+//                 <Col style={{background: 'red'}} span={8}>col-8</Col>
+//                 <Col style={{background: 'blue'}} span={8}>col-8</Col>
+//             </Row>
+//         </div>
+//     );
+// };
 
 ReactDOM.render(
     <BrowserRouter history={hashHistory} basename="/typescript.html">
@@ -94,7 +92,7 @@ ReactDOM.render(
             <Header/>
                 <Route exact path="/" component={Default} />
                 <Route path="/get/:indexId" component={Default} />
-                <Route path="/antd" component={MyAntd} />
+                {/* <Route path="/antd" component={MyAntd} /> */}
                 <Route path="/test" component={() => (
                     <div><h1>没有单独抽离的组件</h1></div>
                 )} />
