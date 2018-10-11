@@ -2,6 +2,7 @@ module.exports = {
     entry: {
         index: __dirname + '/src/index.tsx',
         get_started: __dirname + '/src/get_started.tsx',
+        get_started_2: __dirname + '/src/get_started_2.tsx',
         cms: __dirname + '/src/cms.tsx'
     },
     output: {

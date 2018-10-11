@@ -18,16 +18,16 @@ let fibonacci: Array<number> = [1, 1, 2, 3, 5];
 str = null;
 str = undefined;
 
-// union type
+// union type(联合类型)
 let unionVar: number | string | boolean;
 unionVar = 123;
 unionVar = '123';
 unionVar = false;
-// alias
+// alias(别名)
 type multitypes = number | string | boolean;
 let a:multitypes = 123;
 a = '123';
-a= false;
+a = false;
 
 // multi type
 interface Person {
@@ -68,18 +68,9 @@ function test(input: string) :string {
 test('fff u');
 // test(123);
 
-
-// 类型分配
-
-// class
-
-// 奇奇怪怪的写法
-
-
-
 ReactDOM.render(
     <div>
-        <h1>typescript的基础知识 整理</h1>
+        <h1>typescript 类型篇</h1>
     </div>,
     document.getElementById("app") as HTMLElement
 );
