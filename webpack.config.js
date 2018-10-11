@@ -1,9 +1,8 @@
 module.exports = {
     entry: {
-        index: __dirname + '/src/index',
-        // rcre: __dirname + '/src/rcre',
+        index: __dirname + '/src/index.tsx',
         get_started: __dirname + '/src/get_started.tsx',
-        cms: __dirname + '/src/cms'
+        cms: __dirname + '/src/cms.tsx'
     },
     output: {
         filename: '[name].js',

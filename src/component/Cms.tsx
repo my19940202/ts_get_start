@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Layout, Menu, Icon } from '@baidu/native-ads-antd';
 import '@baidu/native-ads-antd/dist/@baidu/native-ads-antd.css';
-import { BrowserRouter, Route, hashHistory,Link} from 'react-router-dom';
+import {Router, Route, Link} from 'react-router-dom';
+import history from './../history';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -34,7 +35,7 @@ export class AntdGetStrted extends React.Component<HelloProps, {}> {
             height: this.height
         }
         return (
-            <BrowserRouter history={hashHistory}>
+            <Router history={history}>
                 <Layout style={style}>
                     <Sider
                         breakpoint="xs"
@@ -78,7 +79,7 @@ export class AntdGetStrted extends React.Component<HelloProps, {}> {
                         </Footer>
                     </Layout>
                 </Layout>
-            </BrowserRouter>
+            </Router>
         );
     }
 }

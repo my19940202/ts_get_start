@@ -2,7 +2,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 // import '@baidu/native-ads-antd/dist/@baidu/native-ads-antd.css';
 // import {Popover, Button, Row, Col } from '@baidu/native-ads-antd';
-import {BrowserRouter, Route, hashHistory, Link} from 'react-router-dom';
+import {Router, Route, Link} from 'react-router-dom';
+import history from './history';
+console.log("this is index");
 const content = (
     <div>
         <h1>人生啊</h1>
@@ -87,7 +89,7 @@ const Header = () => {
 // };
 
 ReactDOM.render(
-    <BrowserRouter history={hashHistory} basename="/typescript.html">
+    <Router history={history}>
         <div>
             <Header/>
                 <Route exact path="/" component={Default} />
@@ -97,6 +99,6 @@ ReactDOM.render(
                     <div><h1>没有单独抽离的组件</h1></div>
                 )} />
         </div>
-    </BrowserRouter>,
+    </Router>,
     document.getElementById("app")  as HTMLElement
 );
