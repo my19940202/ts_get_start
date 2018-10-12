@@ -1,5 +1,8 @@
 # ts相关学习
 - typescript熟悉
+    - 类型
+    - 函数
+    - class
 - react-router-dom
 > https://www.tslang.cn/docs/handbook/variable-declarations.html
 

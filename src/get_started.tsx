@@ -1,9 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import './style.css';
-// 常用的各类的变量（切换类型会报错）
-
-// 基础类型
+// ########基础类型########
 let isSet: boolean = false;
 let str: string = 'this is string';
 let count: number = 1234;
@@ -59,18 +57,83 @@ human = {
     sex: 'male'
 };
 
-// 函数定义
+// ########函数########
+// 普通参数
 function test(input: string) :string {
     console.log(input);
     return input;
 }
-
 test('fff u');
-// test(123);
+// error: test(123);
+// 参数设置可选
+function optionalParam(p1: number, p2?: string) {
+    console.log(`${p1} ~ ${p2}`);
+}
+optionalParam(123);
+optionalParam(123, 'test');
+// error optionalParam(123, 'test', '1234');
+// 参数设置默认值
+function defalutParamVal(p1:number, p2 = 123) {
+    console.log(p1, p2)
+}
+defalutParamVal(123);
+defalutParamVal(123, 321);
+
+// 函数简写
+let funcA = (a: number, b: number) => {
+    console.log('简写的函数', a+b);
+    return a + b;
+};
+let funcB = (a: number, b: number) => a + b;
+let reJson = () => ({a: 1,b: 2}); 
+/* 和下面的写法作用一样,返回一个json,json用()包起来
+let reJson = () => {
+    return {
+        a: 1,
+        b: 2
+    }
+};
+*/
+funcA(123, 321)
+console.log(reJson());
+console.log('this is funcB' ,funcB(123, 321));
+// TODO:函数的this
+// TODO:函数的重载
+
+// ########class########
+// 一个简单的class
+class Chinese {
+    name: string;
+    sex: string;
+    age: number;
+    constructor(name: string, sex: string, age: number) {
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+    }
+    say() {
+        console.log(`我是${this.name}, 今年${this.age}了`);
+    }
+}
+class Shanghairen extends Chinese {
+    howtown: string;
+    constructor(name: string, sex: string, age: number, howtown: string) {
+        super(name, sex, age);
+        this.howtown = howtown;
+    }
+    say() {
+        console.log(`阿拉是${this.name}, 今宁${this.age}了`);
+    }
+}
+let zhangsan = new Chinese('张三', 'male', 33);
+zhangsan.say();
+let zhoulibo = new Shanghairen('周立波', 'male', 33, '上海');
+zhoulibo.say();
 
 ReactDOM.render(
     <div>
         <h1>typescript 类型篇</h1>
+        
     </div>,
     document.getElementById("app") as HTMLElement
 );
